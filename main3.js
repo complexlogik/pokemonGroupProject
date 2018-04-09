@@ -16,15 +16,18 @@ class FuyGieri {
 }
 
 class PokemonOne {
-	constructor(name, hp, attack, defense, abilities) {
+	constructor(name, hp, attack, defense) {
 		this.name = name;
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
-    this.abilities = abilities;
+    this.abilities = []
     // this.moves = moves;
   }
   
+  addAbility(ability){
+    this.abilities.push(ability)
+  }
 }
 
 let guyFieri = new FuyGieri();
@@ -42,11 +45,13 @@ pokemonone.forEach(index => {
      data.stats[5].base_stat,
      data.stats[4].base_stat,
      data.stats[3].base_stat,
-     data.abilities[0].ability.name,
-		 data.abilities[1].ability.name,
-     data.abilities[2].ability.name,
+
     //  data.moves[0].moves.name
     )
+    pokemonone.addAbility(data.abilities[0].ability.name)
+    pokemonone.addAbility(data.abilities[1].ability.name)
+    pokemonone.addAbility(data.abilities[2].ability.name)
+
     // let pokemonone
     //need to replace pokemonone with the way we get the name
     //then add that instead of this

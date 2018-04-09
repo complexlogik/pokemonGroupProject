@@ -31,7 +31,7 @@ class Pokemon {
     this.hp = hp;
     this.attack = attack;
     this.defence = defence;
-    this.abilities = abilities;
+    this.abilities = []
 
 //     this.spAttack = spAttack;
 //     this.spDefence = spDefence;
@@ -40,6 +40,10 @@ class Pokemon {
 //   addAbility(ability) {
 //     this.abilites.push(ability);
   }
+
+  addAbility(ability){
+    this.abilities.push(ability)
+  }  
 }
 
 //let pokeballs = [];
@@ -64,14 +68,15 @@ pokeballs.forEach(index => {
      data.stats[5].base_stat,
      data.stats[4].base_stat,
      data.stats[3].base_stat,
-     data.abilities[0].ability.name,
-		 data.abilities[1].ability.name,
-     data.abilities[2].ability.name,
+
     )
+    pokeballs.addAbility(data.abilities[0].ability.name)
+    pokeballs.addAbility(data.abilities[1].ability.name)
+    pokeballs.addAbility(data.abilities[2].ability.name)
     // let pokemon
     //need to replace pokemon with the way we get the name
     //then add that instead of this
-  fullMetal.add(pokemon)
+  fullMetal.add(pokeballs)
 //    name = this.name
 //    hp = this.hp
 //    attack = this.attack
