@@ -1,7 +1,7 @@
 let dataInsert = document.querySelector("ul");
 //build trainer class & pokemon class
 
-class trainer {
+class EdwardElric {
   constructor() {
     this.pokemon = [];
   }
@@ -45,7 +45,7 @@ class Pokemon {
 // }
 //
 
-let fullMetal = new trainer();
+let fullMetal = new EdwardElric();
 
 let pokeballs = [1, 2, 3];
 
