@@ -13,6 +13,15 @@ class FuyGieri {
     add(poke){
         this.pokemonone.push(poke)
     }
+
+
+get(name) {
+  for(let i = 0; i < this.pokemon.length; i++) {
+      if(name === this.pokemonone[i].name) {
+          return this.pokemonone;
+      }
+    }
+  }
 }
 
 class PokemonOne {
@@ -32,10 +41,17 @@ class PokemonOne {
 
 let guyFieri = new FuyGieri();
 
-let pokemonone = [97, 199, 108];
+// let pokemonone = [97, 199, 108];
 
-pokemonone.forEach(index => {
-  axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
+// pokemonone.forEach(index => {
+//   axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
+  axios.all([
+      axios.get("https://pokeapi.co/api/v2/pokemon/97/"),
+      axios.get("https://pokeapi.co/api/v2/pokemon/108/"),
+      axios.get("https://pokeapi.co/api/v2/pokemon/199/")
+  ])
+  then(responses =>{
+
     let data = response.data;
 
 
@@ -47,7 +63,9 @@ pokemonone.forEach(index => {
      data.stats[3].base_stat,
 
     //  data.moves[0].moves.name
-    )
+    )}
+  )
+  
     pokemonone.addAbility(data.abilities[0].ability.name)
     pokemonone.addAbility(data.abilities[1].ability.name)
     pokemonone.addAbility(data.abilities[2].ability.name)
@@ -62,8 +80,8 @@ pokemonone.forEach(index => {
 //    defence = this.defence
 
     // dataInsert.innerHTML += `<il> ${pokemonone.name}`;
-  });
-});
+//   });
+// });
 
 // axios.get("https://pokeapi.co/api/v2/pokemonone/97/")
 // 	.then((response) => {
