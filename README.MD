@@ -5,3 +5,4 @@ to do
 -linking each pokemon to a trainer to call all pokemon with the trainer
 -make a seperate js file to call both trainers
 -make the "front end for group
+
