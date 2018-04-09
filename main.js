@@ -1,6 +1,8 @@
 let dataInsert = document.querySelector("ul");
 //build trainer class & pokemon class
 
+
+
 class EdwardElric {
   constructor() {
     this.pokemon = [];
@@ -29,6 +31,8 @@ class Pokemon {
     this.hp = hp;
     this.attack = attack;
     this.defence = defence;
+    this.abilities = abilities;
+
 //     this.spAttack = spAttack;
 //     this.spDefence = spDefence;
 //     this.abilites = [];
@@ -59,7 +63,10 @@ pokeballs.forEach(index => {
      data.name,
      data.stats[5].base_stat,
      data.stats[4].base_stat,
-     data.stats[3].base_stat
+     data.stats[3].base_stat,
+     data.abilities[0].ability.name,
+		 data.abilities[1].ability.name,
+     data.abilities[2].ability.name,
     )
     // let pokemon
     //need to replace pokemon with the way we get the name
