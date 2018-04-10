@@ -8,7 +8,7 @@ class FuyGieri {
   all() {
     return this.pokemonone;
   }
-  add(pokemonone) {
+  add(pokemon) {
     this.pokemonone.push(pokemonone);
   }
   get(name) {
@@ -96,6 +96,8 @@ let guyFieri = new FuyGieri();
       pokemonone.hp
     } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${pokemonone.abilities}`;
   });
+
+  callback(guyFieri)
 })
 
 
@@ -104,11 +106,9 @@ let guyFieri = new FuyGieri();
 //    hp = this.hp
 //    attack = this.attack
 //    defence = this.defence
-
     // dataInsert.innerHTML += `<il> ${pokemonone.name}`;
 //   });
 // });
-
 // axios.get("https://pokeapi.co/api/v2/pokemonone/97/")
 // 	.then((response) => { */
 /* // 		let data = response.data
@@ -117,7 +117,6 @@ let guyFieri = new FuyGieri();
 //         let attack = data.stats[4].base.stat
 //         let defense = datat.stats[3].base.stat
         
-
 // 		let hypno = new pokemonone()
 // 		name.innerHTML = data.name
 // 		hp.innerHTML = "HP: " + data.stats[5].base_stat
@@ -126,7 +125,6 @@ let guyFieri = new FuyGieri();
 // 		ability1.innerHTML = data.abilities[0].ability.name
 // 		ability2.innerHTML = data.abilities[1].ability.name
 // 		ability3.innerHTML = data.abilities[2].ability.name
-
 // 	})
 // 	.catch((error) => { */
 // 		console.log(error)
