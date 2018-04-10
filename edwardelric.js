@@ -50,7 +50,7 @@ let fullMetal = new EdwardElric();
 
 // pokeballs.forEach(index => {
 // get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-
+function callPokemon(callback) 
 axios
   .all([
     axios.get("https://pokeapi.co/api/v2/pokemon/791/"),
@@ -80,6 +80,7 @@ axios
         pokemon.hp
       } Attack: ${pokemon.attack} Defence: ${pokemon.defence}`;
     });
+    callback(fullMetal)
   });
 
 // data.forEach(name => {
