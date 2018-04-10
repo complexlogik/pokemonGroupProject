@@ -1,24 +1,20 @@
 let stephenData = document.querySelector("ul")
 
 
-
-// 
 class FuyGieri {
   constructor() {
     this.pokemonone = [];
   }
   all() {
-    return this.pokemonone
+    return this.pokemonone;
   }
-    add(poke){
-        this.pokemonone.push(poke)
-    }
-
-
-get(name) {
-  for(let i = 0; i < this.pokemon.length; i++) {
-      if(name === this.pokemonone[i].name) {
-          return this.pokemonone;
+  add(pokemonone) {
+    this.pokemonone.push(pokemonone);
+  }
+  get(name) {
+    for (let i = 0; i < this.pokemonone.length; i++) {
+      if (name === this.pokemonone[i].name) {
+        return this.pokemonone;
       }
     }
   }
@@ -30,14 +26,15 @@ class PokemonOne {
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
-    this.abilities = []
-    // this.moves = moves;
-  }
-  
-  addAbility(ability){
-    this.abilities.push(ability)
-  }
+    }
 }
+    // this.abilities = []
+    // this.moves = moves;
+
+//   addAbility(ability){
+//     this.abilities.push(ability)
+//   }
+// }
 
 let guyFieri = new FuyGieri();
 
@@ -45,36 +42,50 @@ let guyFieri = new FuyGieri();
 
 // pokemonone.forEach(index => {
 //   axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-  axios.all([
-      axios.get("https://pokeapi.co/api/v2/pokemon/97/"),
-      axios.get("https://pokeapi.co/api/v2/pokemon/108/"),
-      axios.get("https://pokeapi.co/api/v2/pokemon/199/")
+  axios
+  .all([
+    axios.get("https://pokeapi.co/api/v2/pokemon/97/"),
+    axios.get("https://pokeapi.co/api/v2/pokemon/199/"),
+    axios.get("https://pokeapi.co/api/v2/pokemon/108/")
   ])
-  then(responses =>{
+  .then(responses => {
+    responses.forEach(response => {
+      let data = response.data;
 
-    let data = response.data;
-
-
-    
-    let pokemonone = new PokemonOne(
-     data.name,
-     data.stats[5].base_stat,
-     data.stats[4].base_stat,
-     data.stats[3].base_stat,
-
+      let pokemonone = new PokemonOne(
+        data.name,
+        data.stats[5].base_stat,
+        data.stats[4].base_stat,
+        data.stats[3].base_stat
+      );
     //  data.moves[0].moves.name
-    )}
-  )
+   
   
-    pokemonone.addAbility(data.abilities[0].ability.name)
-    pokemonone.addAbility(data.abilities[1].ability.name)
-    pokemonone.addAbility(data.abilities[2].ability.name)
+
+    // pokemonone.addAbility(data.abilities[0].ability.name)
+    // pokemonone.addAbility(data.abilities[1].ability.name)
+    // pokemonone.addAbility(data.abilities[2].ability.name)
 
     // let pokemonone
     //need to replace pokemonone with the way we get the name
     //then add that instead of this
-  guyFieri.add(pokemonone)
-//    name = this.name
+
+
+    guyFieri.add(pokemonone);
+    name = this.name;
+    hp = this.hp;
+    attack = this.attack;
+    defense = this.defense;
+
+    stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+      pokemonone.hp
+    } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense}`;
+  });
+});
+
+
+
+/* //    name = this.name
 //    hp = this.hp
 //    attack = this.attack
 //    defence = this.defence
@@ -84,8 +95,8 @@ let guyFieri = new FuyGieri();
 // });
 
 // axios.get("https://pokeapi.co/api/v2/pokemonone/97/")
-// 	.then((response) => {
-// 		let data = response.data
+// 	.then((response) => { */
+/* // 		let data = response.data
 //         let name = data.name
 //         let hp = data.stats[5].base_stat
 //         let attack = data.stats[4].base.stat
@@ -102,7 +113,7 @@ let guyFieri = new FuyGieri();
 // 		ability3.innerHTML = data.abilities[2].ability.name
 
 // 	})
-// 	.catch((error) => {
+// 	.catch((error) => { */
 // 		console.log(error)
 // 	})
 
