@@ -1,11 +1,13 @@
 body {
   margin-left: 0px;
-  margin-left: 0px; }
+  margin-top: 0px; }
 
 .pokemonstadium {
   margin-top: 0px;
-  height: 80%;
-  max-height: 80%;
+  height: 1000px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   margin-left: 0px;
   z-index: 0;
   margin-bottom: 0px; }
@@ -15,30 +17,82 @@ body {
 
 .fuygieri {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   height: 130px;
-  margin-left: 1260px;
-  margin-top: 335px; }
+  margin-left: 900px;
+  margin-top: 295px;
+  animation: grow 4s forwards; }
 
 .edward {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   height: 140px;
-  margin-left: 550px;
-  margin-top: 330px; }
+  margin-left: 420px;
+  margin-top: 290px;
+  animation: grow 4s forwards; }
+
+.rayquaza {
+  position: absolute;
+  z-index: 2;
+  height: 125px;
+  margin-top: 20px;
+  margin-left: 37px;
+  opacity: .7; }
+
+.tourney2 {
+  position: absolute;
+  z-index: 1;
+  height: 250px;
+  margin-top: 50px;
+  margin-left: 30px;
+  opacity: .8; }
+
+.tourney {
+  position: absolute;
+  z-index: 1;
+  height: 250px;
+  margin-left: 525px;
+  margin-top: 195px;
+  opacity: .1;
+  animation: fadeIn1 4s; }
+
+.getready {
+  position: absolute;
+  z-index: 3;
+  height: 420px;
+  margin-left: 400px;
+  margin-top: 350px;
+  opacity: 0;
+  animation: fadeIn2 6.5s; }
 
 .intro {
   position: absolute;
+  max-width: 80%;
   z-index: 2;
-  height: 238px;
-  margin-left: 748px;
-  margin-top: 214px;
-  opacity: .8;
-  animation: fadeIn2 4s; }
+  height: 220px;
+  margin-left: 510px;
+  margin-top: 190px;
+  opacity: .9;
+  animation: fadeIn2 7s; }
 
+@keyframes fadeIn1 {
+  0% {
+    opacity: .65; }
+  30% {
+    opacity: .75; }
+  50% {
+    opacity: .85; }
+  60% {
+    opacity: .9; }
+  70% {
+    opacity: .9; }
+  85% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
 @keyframes fadeIn2 {
   0% {
-    opacity: .1; }
+    opacity: .0; }
   20% {
     opacity: .2; }
   30% {
@@ -54,6 +108,13 @@ body {
   85% {
     opacity: .85; }
   100% {
-    opacity: .9; } }
+    opacity: .95; } }
+@keyframes grow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1.2); } }
 
 /*# sourceMappingURL=main.css.map */
