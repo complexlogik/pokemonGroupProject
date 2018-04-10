@@ -159,7 +159,5 @@ function callAxios2(callback) {
 // 	.catch((error) => {
 // 		console.log(error)
 // 	})
-<<<<<<< HEAD
 
-=======
->>>>>>> 335330ec002b4941ec7cdbad71c84fcf4f2b4d52
+
