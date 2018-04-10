@@ -1,5 +1,4 @@
 let stephenData = document.querySelector("ul");
-
 class FuyGieri {
   constructor() {
     this.pokemonone = [];
@@ -7,7 +6,7 @@ class FuyGieri {
   all() {
     return this.pokemonone;
   }
-  add(pokemon) {
+  add(pokemonone) {
     this.pokemonone.push(pokemonone);
   }
   get(name) {
@@ -39,43 +38,51 @@ let guyFieri = new FuyGieri();
 
 // pokemonone.forEach(index => {
 //   axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-axios
-  .all([
-    axios.get("https://pokeapi.co/api/v2/pokemon/97/"),
-    axios.get("https://pokeapi.co/api/v2/pokemon/199/"),
-    axios.get("https://pokeapi.co/api/v2/pokemon/108/")
-  ])
-  .then(responses => {
-    responses.forEach(response => {
-      let data = response.data;
 
-      let pokemonone = new PokemonOne(
-        data.name,
-        data.stats[5].base_stat,
-        data.stats[4].base_stat,
-        data.stats[3].base_stat
+function callAxios(callback) {
+  let url1 = "https://pokeapi.co/api/v2/pokemon/97/";
+  let url2 = "https://pokeapi.co/api/v2/pokemon/199/";
+  let url3 = "https://pokeapi.co/api/v2/pokemon/108/";
 
-      );
-      data.abilities.forEach(item => {
-        pokemonone.addAbility(item.ability.name);
-      });
-     
-      guyFieri.add(pokemonone)
-      name = this.name;
-      hp = this.hp;
-      attack = this.attack;
-      defense = this.defense;
-      abilities = this.abilities;
+  axios
+    .all([axios.get(url1), axios.get(url2), axios.get(url3)])
+    .then(responses => {
+      responses.forEach(response => {
+        let data = response.data;
 
-      stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
-        pokemonone.hp
-      } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${
-        pokemonone.abilities
-      }`;
+        let pokemonone = new PokemonOne(
+          data.name,
+          data.stats[5].base_stat,
+          data.stats[4].base_stat,
+          data.stats[3].base_stat
+        );
+        data.abilities.forEach(item => {
+          pokemonone.addAbility(item.ability.name);
+        });
+
+        guyFieri.add(pokemonone);
+        // name = this.name;
+        // hp = this.hp;
+        // attack = this.attack;
+        // defense = this.defense;
+        // abilities = this.abilities;
+
+        stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+          pokemonone.hp
+        } Attack: ${pokemonone.attack} Defense: ${
+          pokemonone.defense
+        } Ability: ${pokemonone.abilities}`;
+        
+
+        stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+          pokemonone.hp
+        } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${
+          pokemonone.abilities
+      }`
+    })
+      callback(guyFieri);
     });
-
-    callback(guyFieri);
-  });
+}
 
 /* //    name = this.name
 //    hp = this.hp
