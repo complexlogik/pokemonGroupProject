@@ -43,18 +43,6 @@ class Pokemon {
 
 // pokeballs.forEach(index => {
 // get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-<<<<<<< HEAD
-function callPokemon(callback) 
-axios
-  .all([
-    axios.get("https://pokeapi.co/api/v2/pokemon/791/"),
-    axios.get("https://pokeapi.co/api/v2/pokemon/405/"),
-    axios.get("https://pokeapi.co/api/v2/pokemon/658/")
-  ])
-  .then(responses => {
-    responses.forEach(response => {
-      let data = response.data;
-=======
 
 let fullMetal = new EdwardElric();
 
@@ -78,7 +66,6 @@ function callAxios(callback) {
         data.abilities.forEach(item => {
           pokemon.addAbility(item.ability.name);
         });
->>>>>>> 335330ec002b4941ec7cdbad71c84fcf4f2b4d52
 
         fullMetal.add(pokemon);
         // name = this.name;
@@ -96,12 +83,7 @@ function callAxios(callback) {
       });
       callback(fullMetal);
     });
-<<<<<<< HEAD
-    callback(fullMetal)
-  });
-=======
 }
->>>>>>> 335330ec002b4941ec7cdbad71c84fcf4f2b4d52
 
 // data.forEach(name => {
 //${response.data.forms.name}`)
