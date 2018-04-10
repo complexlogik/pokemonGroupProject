@@ -39,7 +39,7 @@ let guyFieri = new FuyGieri();
 // pokemonone.forEach(index => {
 //   axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
 
-function callAxios(callback) {
+function callAxios2(callback) {
   let url1 = "https://pokeapi.co/api/v2/pokemon/97/";
   let url2 = "https://pokeapi.co/api/v2/pokemon/199/";
   let url3 = "https://pokeapi.co/api/v2/pokemon/108/";
@@ -72,14 +72,13 @@ function callAxios(callback) {
         } Attack: ${pokemonone.attack} Defense: ${
           pokemonone.defense
         } Ability: ${pokemonone.abilities}`;
-        
 
         stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
           pokemonone.hp
-        } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${
-          pokemonone.abilities
-      }`
-    })
+        } Attack: ${pokemonone.attack} Defense: ${
+          pokemonone.defense
+        } Ability: ${pokemonone.abilities}`;
+      });
       callback(guyFieri);
     });
 }
