@@ -22,18 +22,15 @@ class EdwardElric {
 
 class Pokemon {
   //   constructor(index, name, hp, attack, defence, spAttack, spDefence, abilites) {
-  constructor(name, hp, attack, defence) {
-    // this.index = index;
+  constructor(name, hp, attack, defence,abilities = []) {
     this.name = name;
     this.hp = hp;
     this.attack = attack;
     this.defence = defence;
-    // this.spAttack = spAttack;
-    // this.spDefence = spDefence;
-    //     this.abilites = [];
-    //   }
-    //   addAbility(ability) {
-    //     this.abilites.push(ability);
+    this.abilies = abilities;
+  }
+  addAbility(ability) {
+    this.abilites.push(ability);
   }
 }
 
@@ -43,13 +40,13 @@ class Pokemon {
 //  pokeballs.push[i];
 // }
 //
-
-let fullMetal = new EdwardElric();
-
 // let pokeballs = [1, 2, 3];
 
 // pokeballs.forEach(index => {
 // get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
+
+
+let fullMetal = new EdwardElric();
 
 axios
   .all([
@@ -67,18 +64,20 @@ axios
         data.stats[4].base_stat,
         data.stats[3].base_stat
       );
-      // let pokemon
-      //need to replace pokemon with the way we get the name
-      //then add that instead of this
+      // data.abilites.forEach(item =>{
+      //   pokemon.addAbility(item.ability.name)
+      // })
+ 
       fullMetal.add(pokemon);
       name = this.name;
       hp = this.hp;
       attack = this.attack;
       defence = this.defence;
+      abilites = this.abilites
 
-      dataInsert.innerHTML += `<il> Name: ${pokemon.name} HP: ${
+      dataInsert.innerHTML += `<il> Name: ${pokemon.name} </li><li> HP: ${
         pokemon.hp
-      } Attack: ${pokemon.attack} Defence: ${pokemon.defence}`;
+      } </li> <li>Attack: ${pokemon.attack} </li> <li>Defence: ${pokemon.defence} </li> <li>Ability: ${pokemon.abilites}</li>`;
     });
   });
 

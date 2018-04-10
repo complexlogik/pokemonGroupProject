@@ -1,5 +1,4 @@
-let stephenData = document.querySelector("ul")
-
+let stephenData = document.querySelector("ul");
 
 class FuyGieri {
   constructor() {
@@ -21,19 +20,16 @@ class FuyGieri {
 }
 
 class PokemonOne {
-	constructor(name, hp, attack, defense, abilities=[]) {
-		this.name = name;
-		this.hp = hp;
-		this.attack = attack;
+  constructor(name, hp, attack, defense, abilities = []) {
+    this.name = name;
+    this.hp = hp;
+    this.attack = attack;
     this.defense = defense;
     this.abilities = abilities;
+  }
 
-    }
-
-    // this.moves = moves;
-
-  addAbility(ability){
-    this.abilities.push(ability)
+  addAbility(ability) {
+    this.abilities.push(ability);
   }
 }
 
@@ -43,7 +39,7 @@ let guyFieri = new FuyGieri();
 
 // pokemonone.forEach(index => {
 //   axios.get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-  axios
+axios
   .all([
     axios.get("https://pokeapi.co/api/v2/pokemon/97/"),
     axios.get("https://pokeapi.co/api/v2/pokemon/199/"),
@@ -57,50 +53,29 @@ let guyFieri = new FuyGieri();
         data.name,
         data.stats[5].base_stat,
         data.stats[4].base_stat,
-        data.stats[3].base_stat,
-        // data.abilities[0].ability.name,
-        // data.abilities[1].ability.name,
-        // data.abilities[1].ability.name,
+        data.stats[3].base_stat
 
-      )
-      data.abilities.forEach((item) => {
+      );
+      data.abilities.forEach(item => {
         pokemonone.addAbility(item.ability.name);
-      })
-    //  data.moves[0].moves.name
-   
-  
+      });
+     
+      guyFieri.add(pokemonone)
+      name = this.name;
+      hp = this.hp;
+      attack = this.attack;
+      defense = this.defense;
+      abilities = this.abilities;
 
-    // pokemonone.addAbility(data.abilities[0].ability.name)
-    // pokemonone.addAbility(data.abilities[1].ability.name)
-    // pokemonone.addAbility(data.abilities[2].ability.name)
+      stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+        pokemonone.hp
+      } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${
+        pokemonone.abilities
+      }`;
+    });
 
-    // let pokemonone
-    //need to replace pokemonone with the way we get the name
-    //then add that instead of this
-
-
-//     guyFieri.add(pokemonone);
-//   })
-//   callback(guyFieri)
-// })
-
-
-    name = this.name;
-    hp = this.hp;
-    attack = this.attack;
-    defense = this.defense;
-    abilities = this.abilities;
-    
-
-    stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
-      pokemonone.hp
-    } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${pokemonone.abilities}`;
+    callback(guyFieri);
   });
-
-  callback(guyFieri)
-})
-
-
 
 /* //    name = this.name
 //    hp = this.hp
@@ -129,7 +104,6 @@ let guyFieri = new FuyGieri();
 // 	.catch((error) => { */
 // 		console.log(error)
 // 	})
-
 
 // axios.get("https://pokeapi.co/api/v2/pokemonone/199/")
 // 	.then((response) => {
