@@ -1,0 +1,83 @@
+body{
+    margin-left: 0px;
+    margin-left: 0px;
+
+
+}
+
+.pokemonstadium{
+    margin-top: 0px;
+    height: 80%;
+    max-height: 80%;
+    margin-left: 0px;
+    z-index: 0;
+    margin-bottom: 0px;
+    
+}
+
+.row{
+    // z-index: 2;
+    position: absolute;
+
+}
+
+.fuygieri{
+    position: absolute;
+    z-index: 2;
+    height: 130px;
+    margin-left: 1260px;
+    margin-top: 335px;
+}
+.edward{
+    position: absolute;
+    z-index: 2;
+    height: 140px;
+    margin-left: 550px;
+    margin-top: 330px;
+}
+.intro{
+    position: absolute;
+    z-index: 2;
+    height: 238px;
+    margin-left: 748px;
+    margin-top: 214px;
+    opacity: .8;
+    animation: fadeIn2 4s,
+}
+
+// .intro:hover{
+//     animation:  1s infinite;
+//     cursor: pointer;
+// }
+
+@keyframes fadeIn2 {
+    0% {
+      opacity: .1;
+    }
+    20% {
+      opacity: .2;
+    }
+  
+    30% {
+      opacity: .3;
+    }
+
+    40% {
+        opacity: .4;
+    }
+    50% {
+        opacity: .5;
+    }
+    60% {
+      opacity: .6;
+    }
+    70% {
+        opacity: .70;
+    }
+    85% {
+        opacity: .85;
+    }
+    100% {
+      opacity: .9;
+    }
+  }
