@@ -79,24 +79,24 @@ let guyFieri = new FuyGieri();
     //then add that instead of this
 
 
-    guyFieri.add(pokemonone);
-  })
-  callback(guyFieri)
-})
+//     guyFieri.add(pokemonone);
+//   })
+//   callback(guyFieri)
+// })
 
 
-//     name = this.name;
-//     hp = this.hp;
-//     attack = this.attack;
-//     defense = this.defense;
-//     abilities = this.abilities;
+    name = this.name;
+    hp = this.hp;
+    attack = this.attack;
+    defense = this.defense;
+    abilities = this.abilities;
     
 
-//     stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
-//       pokemonone.hp
-//     } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${pokemonone.abilities}`;
-//   });
-// })
+    stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+      pokemonone.hp
+    } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${pokemonone.abilities}`;
+  });
+})
 
 
 
