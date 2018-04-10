@@ -21,20 +21,21 @@ class FuyGieri {
 }
 
 class PokemonOne {
-	constructor(name, hp, attack, defense) {
+	constructor(name, hp, attack, defense, abilities=[]) {
 		this.name = name;
 		this.hp = hp;
 		this.attack = attack;
-		this.defense = defense;
+    this.defense = defense;
+    this.abilities = abilities;
+
     }
-}
-    // this.abilities = []
+
     // this.moves = moves;
 
-//   addAbility(ability){
-//     this.abilities.push(ability)
-//   }
-// }
+  addAbility(ability){
+    this.abilities.push(ability)
+  }
+}
 
 let guyFieri = new FuyGieri();
 
@@ -56,8 +57,15 @@ let guyFieri = new FuyGieri();
         data.name,
         data.stats[5].base_stat,
         data.stats[4].base_stat,
-        data.stats[3].base_stat
-      );
+        data.stats[3].base_stat,
+        // data.abilities[0].ability.name,
+        // data.abilities[1].ability.name,
+        // data.abilities[1].ability.name,
+
+      )
+      data.abilities.forEach((item) => {
+        pokemonone.addAbility(item.ability.name);
+      })
     //  data.moves[0].moves.name
    
   
@@ -72,16 +80,23 @@ let guyFieri = new FuyGieri();
 
 
     guyFieri.add(pokemonone);
-    name = this.name;
-    hp = this.hp;
-    attack = this.attack;
-    defense = this.defense;
+  })
+  callback(guyFieri)
+})
 
-    stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
-      pokemonone.hp
-    } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense}`;
-  });
-});
+
+//     name = this.name;
+//     hp = this.hp;
+//     attack = this.attack;
+//     defense = this.defense;
+//     abilities = this.abilities;
+    
+
+//     stephenData.innerHTML += `<il> Name: ${pokemonone.name} HP: ${
+//       pokemonone.hp
+//     } Attack: ${pokemonone.attack} Defense: ${pokemonone.defense} Ability: ${pokemonone.abilities}`;
+//   });
+// })
 
 
 
