@@ -1,4 +1,4 @@
-let stephenData = document.querySelector("ul");
+let stephenData = document.querySelector("h4");
 class FuyGieri {
   constructor() {
     this.pokemonone = [];
