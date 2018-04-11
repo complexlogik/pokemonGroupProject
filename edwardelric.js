@@ -18,12 +18,15 @@ class EdwardElric {
 }
 
 class Pokemon {
-  constructor(name, hp, attack, defence, abilities) {
+  constructor(name, hp, attack, defence, abilities = []) {
     this.name = name;
     this.hp = hp;
     this.attack = attack;
     this.defence = defence;
     this.abilities = abilities;
+  }
+  addAbility(ability) {
+    this.abilities.push(ability);
   }
 }
 
@@ -55,11 +58,11 @@ function callAxios(callback) {
           data.name,
           data.stats[5].base_stat,
           data.stats[4].base_stat,
-          data.stats[3].base_stat
+          data.stats[3].base_stat,
         );
-        data.abilities.forEach(item => {
-          pokemon.addAbility(item.ability.name);
-        });
+          data.abilities.forEach(item => {
+            pokemon.addAbility(item.ability.name);
+          });
 
         fullMetal.add(pokemon);
       });
