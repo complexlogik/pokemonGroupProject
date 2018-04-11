@@ -18,42 +18,48 @@ footer {
   margin-top: 307px;
   margin-left: 390px;
   position: absolute;
-  z-index: 2; }
+  z-index: 2;
+  animation: fadeIn4 12s; }
 
 .greninja {
   height: 120px;
   margin-top: 475px;
   margin-left: 270px;
   position: absolute;
-  z-index: 3; }
+  z-index: 3;
+  animation: fadeIn4 15s; }
 
 .luxray {
   height: 150px;
   margin-top: 525px;
   margin-left: 375px;
   position: absolute;
-  z-index: 2; }
+  z-index: 2;
+  animation: fadeIn4 10s; }
 
 .slowking {
   height: 150px;
   margin-top: 450px;
   margin-left: 1070px;
   z-index: 2;
-  position: absolute; }
+  position: absolute;
+  animation: fadeIn4 15s; }
 
 .lickitung {
   height: 120px;
   margin-top: 540px;
   margin-left: 850px;
   z-index: 2;
-  position: absolute; }
+  position: absolute;
+  animation: fadeIn4 15s; }
 
 .hypno {
   height: 100px;
   margin-top: 333px;
   margin-left: 900px;
   z-index: 2;
-  position: absolute; }
+  position: absolute;
+  animation: fadeIn4 13s; }
 
 #sols {
   border: 2px solid black;
@@ -286,5 +292,22 @@ ul {
     transform: scale(1.2); }
   100% {
     transform: scale(1.3); } }
+@keyframes fadeIn4 {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  60% {
+    opacity: .6; }
+  70% {
+    opacity: .7; }
+  80% {
+    opacity: .8; }
+  90% {
+    opacity: .95; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
