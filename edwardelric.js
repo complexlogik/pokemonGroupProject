@@ -1,5 +1,3 @@
-let dataInsert = document.querySelector("ul");
-
 class EdwardElric {
   constructor() {
     this.pokemon = [];
@@ -13,19 +11,18 @@ class EdwardElric {
   get(name) {
     for (let i = 0; i < this.pokemon.length; i++) {
       if (name === this.pokemon[i].name) {
-        return this.pokemon;
+        return this.pokemon[i];
       }
     }
   }
 }
 
 class Pokemon {
-  //   constructor(index, name, hp, attack, defence, spAttack, spDefence, abilites) {
-  constructor(name, hp, attack, defence, abilities = []) {
+  constructor(name, hp, attack, defense, abilities = []) {
     this.name = name;
     this.hp = hp;
     this.attack = attack;
-    this.defence = defence;
+    this.defense = defense;
     this.abilities = abilities;
   }
   addAbility(ability) {
@@ -34,7 +31,7 @@ class Pokemon {
 }
 
 //let pokeballs = [];
-//need to
+//how to get them all!!!
 // for (let i = 1; i < 949, i++) {
 //  pokeballs.push[i];
 // }
@@ -61,29 +58,14 @@ function callAxios(callback) {
           data.name,
           data.stats[5].base_stat,
           data.stats[4].base_stat,
-          data.stats[3].base_stat
+          data.stats[3].base_stat,
         );
-        data.abilities.forEach(item => {
-          pokemon.addAbility(item.ability.name);
-        });
+          data.abilities.forEach(item => {
+            pokemon.addAbility(item.ability.name);
+          });
 
         fullMetal.add(pokemon);
-        // name = this.name;
-        // hp = this.hp;
-        // attack = this.attack;
-        // defence = this.defence;
-        // abilites = this.abilites
-
-
-  dataInsert.innerHTML += `<il> Name: ${pokemon.name}<br> </li><li> HP: ${
-    pokemon.hp
-  } </li> <li>Attack: ${pokemon.attack} </li> <li>Defence: ${
-    pokemon.defence
-  } </li> <li>Ability: ${pokemon.ability}</li>`;
       });
       callback(fullMetal);
     });
 }
-
-// data.forEach(name => {
-//${response.data.forms.name}`)

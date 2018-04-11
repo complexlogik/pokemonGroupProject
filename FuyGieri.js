@@ -69,11 +69,11 @@ function callAxios2(callback) {
 
         
 
-        stephenData.innerHTML += `<il> Name: ${pokemonone.name} </li><li> HP: ${
-          pokemonone.hp
-        } Attack: ${pokemonone.attack} </li><li>Defense: ${
-          pokemonone.defense
-        } </li><li>Ability: ${pokemonone.abilities}`;
+        // stephenData.innerHTML += `<il> Name: ${pokemonone.name} </li><li> HP: ${
+        //   pokemonone.hp
+        // } Attack: ${pokemonone.attack} </li><li>Defense: ${
+        //   pokemonone.defense
+        // } </li><li>Ability: ${pokemonone.abilities}`;
       });
       callback(guyFieri);
     });
