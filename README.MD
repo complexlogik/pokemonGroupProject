@@ -1,8 +1,11 @@
 Pokemon group project
 
-to do
--forEach call to get our pokemons with 1 call
--linking each pokemon to a trainer to call all pokemon with the trainer
--make a seperate js file to call both trainers
--make the "front end for group
+Making an unbeatable gym!
+
+
+
+This project showcases how a group dynamic works,
+also it helps understand how to use github to (collab) push/pull and merge using more then one user.
+
+Building upon a previous project to enhance it, with more then 1 personanilty driving the steering wheel
 
