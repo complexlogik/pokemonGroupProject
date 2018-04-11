@@ -1,60 +1,3 @@
-// cpokemonAxios(function(fullMetal) {
-//   console.log(fullMetal);
-
-//   let name1 = document.querySelector("solname");
-//   let stats1 = document.querySelector("solstats");
-//   let abilities1 = document.querySelector("solability");
-//   //solgaleo has 1
-//   name1.innerHTML = fullMetal.pokemon[0].name;
-//   stats1.innerHTML =
-//     "HP: " +
-//     fullMetal.pokemon[0].hp +
-//     ", " +
-//     "Attack: " +
-//     fullMetal.pokemon[0].attack +
-//     ", " +
-//     "Defense: " +
-//     fullMetal.pokemon[0].defense;
-//   abilities1.innerHTML =
-//     "Abillities: " + "[ " + fullMetal.pokemon[0].abilities + " ]";
-
-//   let name2 = document.querySelector("luxname");
-//   let stats2 = document.querySelector("luxstats");
-//   let abilities2 = document.querySelector("luxabilites");
-//   //luxray has 3
-//   name2.innerHTML = fullMetal.pokemon[1].name;
-//   stats2.innerHTML =
-//     "HP: " +
-//     fullMetal.pokemon[1].hp +
-//     ", " +
-//     "Attack: " +
-//     fullMetal.pokemon[1].attack +
-//     ", " +
-//     "Defense: " +
-//     fullMetal.pokemon[1].defense;
-//   abilities2.innerHTML =
-//     "Abillities: " + "[ " + fullMetal.pokemon[1].abilities + " ]";
-
-//   let name3 = document.querySelector("grename");
-//   let stats3 = document.querySelector("#grestats");
-//   let abilities3 = document.querySelector("greabilities");
-//   //greninja has 2 abilites
-
-//   name3.innerHTML = fullMetal.pokemon[2].name;
-//   stats3.innerHTML =
-//     "HP: " +
-//     fullMetal.pokemon[2].hp +
-//     ", " +
-//     "Attack: " +
-//     fullMetal.pokemon[2].attack +
-//     ", " +
-//     "Defense: " +
-//     fullMetal.pokemon[2].defense;
-//   abilities3.innerHTML =
-//     "Abillities: " + "[ " + fullMetal.pokemon[2].abilities + " ]";
-// });
-
-//if top one doesnt work comment out and use this one
 callAxios(function(EdwardElric) {
   console.log(EdwardElric);
 
@@ -73,7 +16,7 @@ callAxios(function(EdwardElric) {
     "Defense: " +
     EdwardElric.pokemon[0].defense;
   abilities1.innerHTML =
-    "Abillities: " + "[ " + EdwardElric.pokemon[0].abilities + " ]";
+    "Abilities: " + "[ " + EdwardElric.pokemon[0].abilities + " ]";
 
   let name2 = document.querySelector(".luxname");
   let stats2 = document.querySelector(".luxstats");
@@ -89,8 +32,8 @@ callAxios(function(EdwardElric) {
     ", " +
     "Defense: " +
     EdwardElric.pokemon[1].defense;
-  abilities2.innerHTML =
-    "Abillities: " + "[ " + EdwardElric.pokemon[1].abilities + " ]";
+  // abilities2.innerHTML =
+  //   "Abilities: " + "[ " + EdwardElric.pokemon[1].abilities + " ]";
 
   let name3 = document.querySelector(".grename");
   let stats3 = document.querySelector(".grestats");
@@ -108,7 +51,7 @@ stats3.innerHTML =
   "Defense: " +
   EdwardElric.pokemon[2].defense;
 abilities3.innerHTML =
-  "Abillities: " + "[ " + EdwardElric.pokemon[2].abilities + " ]";
+  "Abilities: " + "[ " + EdwardElric.pokemon[2].abilities + " ]";
 });
 
 callAxios2(function(guyFieri) {

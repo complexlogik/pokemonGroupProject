@@ -81,11 +81,11 @@ footer{
 #sols{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(236, 225, 60);
+    color:rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-top: -300px;
-    background-color: rgb(116, 112, 112);
+    background-color: rgba(0,0,0,.75);
     opacity: .8;
     width: 175px;
     box-sizing: border-box;
@@ -96,11 +96,11 @@ footer{
 #lux{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(40, 42, 43);
+    color: rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-top: -170px;
-    background-color: rgb(164, 210, 225);
+    background-color: rgba(0,0,0,.75);
     opacity: .8;
     width: 175px;
     box-sizing: border-box;
@@ -114,12 +114,12 @@ footer{
 #gre{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(164, 210, 225);
+    color: rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-left: 175px;
     margin-top: -170px;
-    background-color: rgba(199, 22, 22, 0.829);
+    background-color: rgba(0,0,0,.75);
     opacity: .8;
     width: 175px;
     text-align: center;
@@ -130,11 +130,11 @@ footer{
 #hypnoo{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(253, 238, 24);
+    color: rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-top: -206px;
-    background-color: rgb(66, 66, 66);
+    background-color: rgba(0,0,0,.75);
     opacity: .8;
     margin-left: 1065px;
     width: 175px;
@@ -148,11 +148,11 @@ footer{
 #slow{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-top: -375px;
-    background-color: rgb(236, 225, 60);
+    background-color: rgbrgba(0,0,0,.75);
     opacity: .8;
     margin-left: 1240px;
     width: 175px;
@@ -166,11 +166,11 @@ footer{
 #lick{
     border: 2px solid black;
     padding: 5px 5px 5px 5px;
-    color: rgb(236, 225, 60);
+    color: rgb(255, 255, 255);
     z-index: 3;
     position: absolute;    
     margin-top: -230px;
-    background-color: rgb(237, 150, 167);
+    background-color:rgba(0,0,0,.75);
     opacity: .8;
     margin-left: 1240px;
     width: 175px;
