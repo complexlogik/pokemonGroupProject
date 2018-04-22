@@ -108,3 +108,4 @@ callAxios2(function(FuyGieri) {
   abilities6.innerHTML =
     "Abillities: " + "[ " + FuyGieri.pokemonone[2].abilities + " ]";
 });
+  
