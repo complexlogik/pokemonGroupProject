@@ -1,4 +1,4 @@
-let stephenData = document.querySelector("h4");
+// let stephenData = document.querySelector("h4");
 
 
 class FuyGieri {
