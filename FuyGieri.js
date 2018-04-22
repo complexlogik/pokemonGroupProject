@@ -1,4 +1,6 @@
 let stephenData = document.querySelector("h4");
+
+
 class FuyGieri {
   constructor() {
     this.pokemonone = [];
@@ -61,6 +63,12 @@ function callAxios2(callback) {
         });
 
         guyFieri.add(pokemonone);
+
+      });
+      callback(guyFieri);
+    });
+}
+
         // name = this.name;
         // hp = this.hp;
         // attack = this.attack;
@@ -74,10 +82,6 @@ function callAxios2(callback) {
         // } Attack: ${pokemonone.attack} </li><li>Defense: ${
         //   pokemonone.defense
         // } </li><li>Ability: ${pokemonone.abilities}`;
-      });
-      callback(guyFieri);
-    });
-}
 
 /* //    name = this.name
 //    hp = this.hp
