@@ -30,17 +30,6 @@ class Pokemon {
   }
 }
 
-//let pokeballs = [];
-//how to get them all!!!
-// for (let i = 1; i < 949, i++) {
-//  pokeballs.push[i];
-// }
-//
-// let pokeballs = [1, 2, 3];
-
-// pokeballs.forEach(index => {
-// get(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => {
-
 let fullMetal = new EdwardElric();
 
 function callAxios(callback) {
